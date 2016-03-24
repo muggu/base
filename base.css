@@ -195,14 +195,13 @@ a{
 }
 #PortBar{
     background-color: #3498db;
+    height: 44px;
     width: 100%;
     position: absolute;
     bottom: 0;
     left: 0;
-    animation-name: Flaming;
-    animation-duration: 0.5s;
-    animation-fill-mode: both;
-    -webkit-animation-play-state: paused; 
+    
+    -webkit-transition: background 1s, height 1s;
 }
 .PortCaption{
     display: inline-block;
@@ -215,22 +214,23 @@ a{
 	background-color: #2f2f2f;
 	padding: 8px 8px;
 	font-size: 12px;
+	width: 28%;
+
+	-webkit-transition: width 1s, -webkit-transform 1s;
 }
 										/* -->>> Animation <<<-- */
 
 #PortIcon:hover #PortBar{
-	-webkit-animation-play-state: running;
+	background: -webkit-linear-gradient(bottom, rgba(255, 100, 100, 1), rgba(52, 152, 219, 0));
+    height: 178px;
+
+	-webkit-transition: background 1s, height 1s;
 }
-@keyframes Flaming{
-	from {
-		background: #3498db;
-		height: 44px;
-	}
-    to {
-    	background: -webkit-linear-gradient(bottom, rgba(255, 100, 100, 1), rgba(52, 152, 219, 0));
-    	height: 178px;
-    }
+#PortIcon:hover #LookLink{
+	width: 80%;
+	-webkit-transform: rotateY(360deg);
 }
+
 										/* -->>> Pop-Up Window <<<-- */
 
 #LookLink {
