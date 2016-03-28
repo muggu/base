@@ -180,7 +180,6 @@ a{
 }
 #PortfolioCont{
  	display: -webkit-flex;
-
 	-webkit-flex-flow: row wrap;
 	justify-content: space-around;
 }
@@ -203,34 +202,41 @@ a{
     position: absolute;
     bottom: 0;
     left: 0;
-    
-    -webkit-transition: background 1s, height 1s;
 }
 .PortCaption{
-    display: inline-block;
-    color: white;
-    margin: 8px 10px;
-    vertical-align: middle;
+	color:white;
+}
+#PortType{
+	width: 50%;
+	padding: 0px;
+	position: absolute;
+	bottom: 14px;
+	left: 20px;
 }
 #LookLink{
-	background-color: #2f2f2f;
-	padding: 8px 8px;
 	font-size: 12px;
-	width: 28%;
-
-	-webkit-transition: width 1s, -webkit-transform 1s;
+	background-color: #2f2f2f;
+	padding: 8px;
+	position: absolute;
+	bottom: 8px;
+	right: 20px;
 }
+
 										/* -->>> Animation <<<-- */
 
 #PortIcon:hover #PortBar{
 	background: -webkit-linear-gradient(bottom, rgba(255, 100, 100, 1), rgba(52, 152, 219, 0));
     height: 178px;
-
-	-webkit-transition: background 1s, height 1s;
+	-webkit-transition: all 1s;
 }
-
+#PortIcon:hover #PortType{
+    width: 210px;
+    padding: 73.5px 0px;
+	-webkit-transition: all 1s;
+}
 #PortIcon:hover #LookLink{
 	width: 80%;
+	-webkit-transition: all 1s;
 	-webkit-transform: rotateY(360deg);
 }
 
@@ -261,7 +267,7 @@ a{
   padding: 20px;
   background: white;
   border-radius: 5px;
-  width: 30%;
+  width: 400px;
   position: relative;
   transition: all 1.5s ease-in;
 }
@@ -271,8 +277,12 @@ a{
   right: 30px;
   transition: all 1s;
 }
-.PopUpContent img{
-  width: 80%;
+.PopUpImage{
+	text-align: center;
+}
+.PopUpImage img{
+	width: 80%;
+	padding: 20px;
 }
 
 
@@ -369,6 +379,11 @@ button, input{
     font-size: 24px;
 }
 
+/*Pop Up Box*/
+
+.PopUpBox {
+  width: 250px;
+}
 
 /*Blog*/
 
